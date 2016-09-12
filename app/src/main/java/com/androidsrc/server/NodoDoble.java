@@ -5,16 +5,16 @@ package com.androidsrc.server;
  */
 
 public class NodoDoble {
-    public Object dato;
+    public MeshNode dato;
     NodoDoble siguiente,anterior;
 
     //Constructor para cuando aun no hay nodos
-    public NodoDoble(Object ele){
+    public NodoDoble(MeshNode ele){
         this(ele,null,null);
     }
 
     //Constructor para cuando ya hay nodos
-    public NodoDoble(Object ele, NodoDoble sig, NodoDoble ant) {
+    public NodoDoble(MeshNode ele, NodoDoble sig, NodoDoble ant) {
         dato=ele;
         siguiente=sig;
         anterior=ant;

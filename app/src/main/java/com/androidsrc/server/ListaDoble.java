@@ -17,7 +17,7 @@ public class ListaDoble {
     }
 
 
-    public void agregarFinal(Object ele){
+    public void agregarFinal(MeshNode ele){
         if (!estaVacia()){
             fin= new NodoDoble(ele, null, fin);
             fin.anterior.siguiente=fin;
@@ -26,7 +26,7 @@ public class ListaDoble {
         }
     }
 
-    public void agregarInicio(Object ele){
+    public void agregarInicio(MeshNode ele){
         if (!estaVacia()){
             inicio=new NodoDoble(ele, inicio, null);
             inicio.siguiente.anterior= inicio;
