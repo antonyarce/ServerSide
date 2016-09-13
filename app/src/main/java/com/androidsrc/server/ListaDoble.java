@@ -5,7 +5,7 @@ package com.androidsrc.server;
  */
 public class ListaDoble {
 
-    private NodoDoble inicio,fin;
+    public NodoDoble inicio,fin;
 
     public ListaDoble(){
         inicio=fin=null;
@@ -14,6 +14,20 @@ public class ListaDoble {
 
     public boolean estaVacia(){
         return inicio==null;
+    }
+
+    public MeshNode actualizar(MeshNode meshNode, ListaDoble lista){
+        if (lista.inicio == null) {
+            lista.agregarInicio(meshNode);
+            return null;
+        } else if (meshNode.ip == lista.inicio.dato.ip){
+            return lista.inicio.dato;
+        } else {
+            NodoDoble nodoTemp = lista.inicio;
+            lista.borrarInicio();
+            lista.fin.siguiente = nodoTemp;
+            return actualizar(meshNode, lista);
+        }
     }
 
 

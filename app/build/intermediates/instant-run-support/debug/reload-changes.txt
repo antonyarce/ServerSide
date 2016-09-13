@@ -1,2 +1,9 @@
-CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/MainActivity$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$SocketServerReplyThread$1$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$SocketServerReplyThread$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$SocketServerThread$1$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$SocketServerReplyThread$2$override.class
 CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/ListaDoble$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/NodoDoble$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$SocketServerThread$override.class
+CHANGED,/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/androidsrc/server/Server$override.class

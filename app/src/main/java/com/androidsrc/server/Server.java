@@ -1,5 +1,6 @@
 package com.androidsrc.server;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -20,11 +21,12 @@ public class Server {
     ListaDoble listaNodos;
 	String message = "";
 	static final int socketServerPORT = 8080;
-    JSONObject jsonObject;
+    JSONObject json;
 
 
 	public Server(MainActivity activity) {
         this.activity = activity;
+        listaNodos = new ListaDoble();
 		Thread socketServerThread = new Thread(new SocketServerThread());
 		socketServerThread.start();
 	}
@@ -96,6 +98,7 @@ public class Server {
 		public void run() {
 
 			String msgReply = "Hello from Server, online clients: " + cnt;
+            MeshNode node;
 
 			try {
                 // Envia mensaje al cliente
@@ -117,16 +120,26 @@ public class Server {
                 InputStream istream = hostThreadSocket.getInputStream();
                 ObjectInput in = new ObjectInputStream(istream);
                 message = in.readUTF();
+                json = new JSONObject(message);
 
+                node = new MeshNode(hostThreadSocket.getInetAddress().toString(),
+                        json.getInt("puerto"),
+                        json.getInt("numero"),
+                        json.getInt("bytesDisp"), 0);
 
+                ListaDoble listaTemp = listaNodos;
+                node = listaNodos.actualizar(node,listaTemp);
+                listaNodos = listaTemp;
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				message += "Something wrong! " + e.toString() + "\n";
-			}
+			} catch (JSONException e) {
+                e.printStackTrace();
+            }
 
-			activity.runOnUiThread(new Runnable() {
+            activity.runOnUiThread(new Runnable() {
 
 				@Override
 				public void run() {
