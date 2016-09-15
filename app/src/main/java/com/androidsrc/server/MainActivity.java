@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
 		msg = (TextView) findViewById(R.id.msg);
 		server = new Server(this);
 		infoip.setText(server.getIpAddress()+":"+server.getPort());
+		ServerCliente serverC = new ServerCliente(this);
 
 		response = (TextView) findViewById(R.id.responseTextView);
 		buttonConnect = (Button) findViewById(R.id.connectButton);
