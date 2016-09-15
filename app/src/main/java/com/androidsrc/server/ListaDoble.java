@@ -30,6 +30,19 @@ public class ListaDoble {
         }
     }
 
+    public MeshNode buscarEspacio(int bytes, ListaDoble lista){
+        if (lista.inicio == null) {
+            return null;
+        } else if ((lista.inicio.dato.bytesTot-lista.inicio.dato.bytesUso) >= bytes){
+            return lista.inicio.dato;
+        } else {
+            NodoDoble nodoTemp = lista.inicio;
+            lista.borrarInicio();
+            lista.fin.siguiente = nodoTemp;
+            return buscarEspacio(bytes, lista);
+        }
+    }
+
 
     public void agregarFinal(MeshNode ele){
         if (!estaVacia()){

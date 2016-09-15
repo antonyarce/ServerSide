@@ -38,7 +38,6 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(Void... arg0) {
-
         socket = null;
 
         try {
@@ -47,7 +46,6 @@ public class Client extends AsyncTask<Void, Void, Void> {
             JSONObject json = new JSONObject();
 
             json.put("dato", "hola mundo");
-
 
             //Recibe mensaje del servidor
             DataInputStream istream = new DataInputStream(socket.getInputStream());
