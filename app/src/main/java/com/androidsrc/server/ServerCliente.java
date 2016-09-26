@@ -3,6 +3,8 @@ package com.androidsrc.server;
 /**
  * Created by allan on 12/09/16.
  */
+import org.json.JSONException;
+
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -63,6 +65,7 @@ public class ServerCliente {
                     count++;
                     BufferedReader in = new  BufferedReader( new InputStreamReader(socket.getInputStream()));
                     String texto = in.readLine();
+                    JsonManager.parser(texto);
                     System.out.println(texto);
 
 
@@ -85,6 +88,8 @@ public class ServerCliente {
                 }
             } catch (IOException e) {
                 // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
@@ -109,7 +114,7 @@ public class ServerCliente {
             try {
                 outputStream = hostThreadSocket.getOutputStream();
                 PrintStream printStream = new PrintStream(outputStream);
-                printStream.print("...");
+                printStream.print(GenerateUUID.crearUUID());
                 printStream.close();
 
                 /*message += "replayed: " + msgReply + "\n";*/
