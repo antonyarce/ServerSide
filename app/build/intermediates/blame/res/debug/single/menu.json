@@ -2,13 +2,5 @@
     {
         "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/menu/main.xml",
         "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ServerSide/app/src/main/res/menu/main.xml"
-    },
-    {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/menu/main.xml"
     }
 ]

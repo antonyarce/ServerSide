@@ -5,17 +5,20 @@ package com.androidsrc.server;
  */
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.apache.commons.codec.binary.Base64;
 
 
 public class JsonManager {
-    static void parser(String mensaje) throws JSONException {
+    static String parser(String mensaje) throws JSONException {
         JSONObject parser = new JSONObject(mensaje);
-        String token = parser.getString("Token");
+        String token;
+        String tipo;
+        String dato;
+        String respuesta="Aqui";
         String accion = parser.getString("Accion");
-        String tipo = parser.getString("Tipo");
-        String dato = parser.getString("Dato");
+        if(accion.equalsIgnoreCase("iniciar")){
+            respuesta="{\"Token:\""+ GenerateBase64.generar(GenerateUUID.crearUUID())+"\"}";
+        }
         System.out.println(accion);
-
+        return respuesta;
     }
 }

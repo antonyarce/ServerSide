@@ -6,9 +6,7 @@ package com.androidsrc.server;
 import org.json.JSONException;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -18,13 +16,13 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.Enumeration;
-import java.util.StringTokenizer;
 
 
 public class ServerCliente {
     MainActivity activity;
     ServerSocket serverSocket;
     String message = "";
+    String texto;
     static final int socketServerPORT = 9090;
 
     public ServerCliente(MainActivity activity) {
@@ -64,7 +62,7 @@ public class ServerCliente {
                     Socket socket = serverSocket.accept();
                     count++;
                     BufferedReader in = new  BufferedReader( new InputStreamReader(socket.getInputStream()));
-                    String texto = in.readLine();
+                    texto = in.readLine();
                     JsonManager.parser(texto);
                     System.out.println(texto);
 
@@ -108,13 +106,11 @@ public class ServerCliente {
         @Override
         public void run() {
             OutputStream outputStream;
-            String msgReply = "Hello from Server, you are #" + cnt;
-
-
             try {
                 outputStream = hostThreadSocket.getOutputStream();
                 PrintStream printStream = new PrintStream(outputStream);
-                printStream.print(GenerateUUID.crearUUID());
+                printStream.print(JsonManager.parser(texto));
+                System.out.println(JsonManager.parser(texto));
                 printStream.close();
 
                 /*message += "replayed: " + msgReply + "\n";*/
@@ -131,6 +127,8 @@ public class ServerCliente {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                 message += "Something wrong! " + e.toString() + "\n";
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
             activity.runOnUiThread(new Runnable() {
