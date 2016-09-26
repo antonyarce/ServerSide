@@ -5,6 +5,7 @@ package com.androidsrc.server;
  */
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.apache.commons.codec.binary.Base64;
 
 
 public class JsonManager {
