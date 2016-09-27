@@ -63,7 +63,6 @@ public class ServerCliente {
                     count++;
                     BufferedReader in = new  BufferedReader( new InputStreamReader(socket.getInputStream()));
                     texto = in.readLine();
-                    JsonManager.parser(texto);
                     System.out.println(texto);
 
 
@@ -87,8 +86,6 @@ public class ServerCliente {
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
         }
     }
@@ -110,7 +107,6 @@ public class ServerCliente {
                 outputStream = hostThreadSocket.getOutputStream();
                 PrintStream printStream = new PrintStream(outputStream);
                 printStream.print(JsonManager.parser(texto));
-                System.out.println(JsonManager.parser(texto));
                 printStream.close();
 
                 /*message += "replayed: " + msgReply + "\n";*/

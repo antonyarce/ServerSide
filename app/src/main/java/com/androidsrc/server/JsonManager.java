@@ -13,7 +13,7 @@ public class JsonManager {
         String token;
         String tipo;
         String dato;
-        String respuesta="Aqui";
+        String respuesta="";
         String accion = parser.getString("Accion");
         if(accion.equalsIgnoreCase("Conexion")){
             String UUID = GenerateUUID.crearUUID();

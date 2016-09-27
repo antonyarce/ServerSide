@@ -1,2 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/libs/commons-codec-1.10.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_649efbb4b3bf2370bb329e1d3cfe86fe9bdcc26e/classes.dex" />
+    </item>
+    <item
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="933a141405a743bd822df94ab08de758d0c80b3d">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_85bce1cc53c121fb98c8cb1ff7d0333b0bc28ac9/classes.dex" />
+    </item>
+    <item
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b863420f94df4f506be9680d16f30313a62895c5">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1475fc78ea31a70b305610dd3b0736e8c780acfa/classes.dex" />
+    </item>
+
+</items>
