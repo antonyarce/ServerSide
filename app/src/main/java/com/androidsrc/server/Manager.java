@@ -22,7 +22,7 @@ import java.util.Enumeration;
 public class Manager {
 	MainActivity activity;
 	ServerSocket serverSocket;
-    ListaDoble listaNodos;
+    NodeMap listaNodos;
 	String message = "";
 	static final int socketServerPORT = 8080;
     JSONObject json;
@@ -30,7 +30,7 @@ public class Manager {
 
 	public Manager(MainActivity activity) {
         this.activity = activity;
-        listaNodos = new ListaDoble();
+        listaNodos = new NodeMap();
 		Thread socketServerThread = new Thread(new SocketServerThread());
 		socketServerThread.start();
 	}
@@ -132,7 +132,7 @@ public class Manager {
                             json.getInt("puerto"),
                             json.getInt("numero"),
                             json.getInt("bytesDisp"), 0);
-                    ListaDoble listaTemp = listaNodos;
+                    NodeMap listaTemp = listaNodos;
                     listaNodos.actualizar(node,listaTemp);
                     listaNodos = listaTemp;
                 } else if (json.getString("tipo") == "meshMemClient") {

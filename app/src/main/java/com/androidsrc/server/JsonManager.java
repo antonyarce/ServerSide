@@ -10,9 +10,6 @@ import org.json.JSONObject;
 public class JsonManager {
     static String parser(String mensaje) throws JSONException {
         JSONObject parser = new JSONObject(mensaje);
-        String token;
-        String tipo;
-        String dato;
         String respuesta="";
         String accion = parser.getString("Accion");
         if(accion.equalsIgnoreCase("Conexion")){

@@ -1,13 +1,12 @@
 package com.androidsrc.server;
 
 /**
- * Created by antonyarce on 10/9/16.
+ * Created by allan on 27/09/16.
  */
-public class ListaDoble {
-
+public class MemoryMap {
     public NodoDoble inicio,fin;
 
-    public ListaDoble(){
+    public MemoryMap(){
         inicio=fin=null;
     }
 
@@ -16,7 +15,7 @@ public class ListaDoble {
         return inicio==null;
     }
 
-    public MeshNode actualizar(MeshNode meshNode, ListaDoble lista){
+    public MeshNode actualizar(MeshNode meshNode, NodeMap lista){
         if (lista.inicio == null) {
             lista.agregarInicio(meshNode);
             return null;
@@ -30,7 +29,7 @@ public class ListaDoble {
         }
     }
 
-    public MeshNode buscarEspacio(int bytes, ListaDoble lista){
+    public MeshNode buscarEspacio(int bytes, NodeMap lista){
         if (lista.inicio == null) {
             return null;
         } else if ((lista.inicio.dato.bytesTot-lista.inicio.dato.bytesUso) >= bytes){
@@ -145,3 +144,5 @@ public class ListaDoble {
         }
     }
 }
+
+
