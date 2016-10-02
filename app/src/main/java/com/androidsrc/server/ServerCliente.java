@@ -4,10 +4,15 @@ package com.androidsrc.server;
  * Created by allan on 12/09/16.
  */
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
@@ -23,10 +28,11 @@ public class ServerCliente {
     ServerSocket serverSocket;
     String message = "";
     String texto;
-    static final int socketServerPORT = 9090;
+    int socketServerPORT;
 
-    public ServerCliente(MainActivity activity) {
+    public ServerCliente(MainActivity activity, int port) {
         this.activity = activity;
+        socketServerPORT = port;
         Thread socketServerThread = new Thread(new SocketServerThread());
         socketServerThread.start();
     }
@@ -61,10 +67,13 @@ public class ServerCliente {
                     // Socket object
                     Socket socket = serverSocket.accept();
                     count++;
-                    BufferedReader in = new  BufferedReader( new InputStreamReader(socket.getInputStream()));
-                    texto = in.readLine();
-                    System.out.println(texto);
 
+                    // Recibe, si es mensaje del cliente
+                    if (socketServerPORT == 9090) {
+                        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                        texto = in.readLine();
+                        System.out.println(texto);
+                    }
 
                     /*message += "#" + count + " from "
                             + socket.getInetAddress() + ":"
@@ -74,7 +83,7 @@ public class ServerCliente {
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            activity.msg.setText(message);
+                            //activity.msg.setText(message);
                         }
                     });
 
@@ -104,10 +113,26 @@ public class ServerCliente {
         public void run() {
             OutputStream outputStream;
             try {
-                outputStream = hostThreadSocket.getOutputStream();
-                PrintStream printStream = new PrintStream(outputStream);
-                printStream.print(JsonManager.parser(texto));
-                printStream.close();
+                //Envia, si recibio del cliente
+                if (socketServerPORT == 9090) {
+                    outputStream = hostThreadSocket.getOutputStream();
+                    PrintStream printStream = new PrintStream(outputStream);
+                    printStream.print(JsonManager.parser(texto));
+                    printStream.close();
+
+                    // Si la conexion es con el nodo
+                } else if (socketServerPORT == 8080) {
+                    // Envia mensaje al nodo
+                    DataOutputStream ostream = new DataOutputStream(hostThreadSocket.getOutputStream());
+                    ostream.writeUTF("Hola desde el manager");
+                    ostream.flush();
+
+                    // Recibe mensaje del nodo
+                    InputStream istream = hostThreadSocket.getInputStream();
+                    ObjectInput in = new ObjectInputStream(istream);
+                    message = in.readUTF();
+                    //json = new JSONObject(message);
+                }
 
                 /*message += "replayed: " + msgReply + "\n";*/
 
@@ -115,7 +140,7 @@ public class ServerCliente {
 
                     @Override
                     public void run() {
-                        //activity.msg.setText(message);
+                        activity.msg.setText(message);
                     }
                 });
 

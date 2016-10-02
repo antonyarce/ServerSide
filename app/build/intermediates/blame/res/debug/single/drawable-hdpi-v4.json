@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/MMManager/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/MMManager/app/src/main/res/drawable-hdpi/ic_launcher.png"
+    },
+    {
         "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
         "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
