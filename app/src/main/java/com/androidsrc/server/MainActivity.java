@@ -1,9 +1,8 @@
 package com.androidsrc.server;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.View;
-import android.widget.Button;
+import android.content.Intent;
+import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -18,10 +17,16 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		infoip = (TextView) findViewById(R.id.infoip);
 		msg = (TextView) findViewById(R.id.msg);
-		//manager = new Manager(this);
+		manager = new Manager(this);
 		//ServerCliente serverc = new ServerCliente(this);
-		ServerCliente server = new ServerCliente(this, 8080);
+		ServerCliente server = new ServerCliente(this, 9090);
 		infoip.setText(server.getIpAddress()+":"+server.getPort());
+	}
+
+	public void pasar(){
+		Intent i = new Intent(MainActivity.this,BotonesActivity.class);
+		startActivity(i);
+
 	}
 
 	@Override
@@ -29,6 +34,8 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 		manager.onDestroy();
 	}
+
+
 
 	
 }

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
+        "outputFile": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
         "map": [
             {
                 "to": {
@@ -13,58 +13,6 @@
                 },
                 "from": {
                     "file": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/values-v11/styles.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 182,
-                        "endLine": 8,
-                        "endColumn": 12,
-                        "endOffset": 316
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/MMManager/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 187
-                },
-                "from": {
-                    "file": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/MMManager/app/src/main/res/values-v11/styles.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 182,
-                        "endLine": 8,
-                        "endColumn": 12,
-                        "endOffset": 316
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endLine": 4,
-                    "endColumn": 12,
-                    "endOffset": 187
-                },
-                "from": {
-                    "file": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/values-v11/styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

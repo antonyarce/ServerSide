@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
     api-level="21"
     density="xxhdpi"
-    format="7"
-    timestamp="1076252917258"
-    token="8997159992481785171" >
+    format="8"
+    plugin-version="2.2.0"
+    timestamp="5002622159862"
+    token="4724330973366310941"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
@@ -24,9 +25,11 @@
         location="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="17608768739462" >
+    <build
+        timestamp="5002622159862"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/outputs/apk/app-debug.apk"
+            location="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
 

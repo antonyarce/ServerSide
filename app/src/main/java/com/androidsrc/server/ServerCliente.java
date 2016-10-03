@@ -4,15 +4,10 @@ package com.androidsrc.server;
  * Created by allan on 12/09/16.
  */
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.net.InetAddress;
@@ -114,25 +109,11 @@ public class ServerCliente {
             OutputStream outputStream;
             try {
                 //Envia, si recibio del cliente
-                if (socketServerPORT == 9090) {
                     outputStream = hostThreadSocket.getOutputStream();
                     PrintStream printStream = new PrintStream(outputStream);
-                    printStream.print("Hola desde el manager");
+                    printStream.print(JsonManager.parser(texto));
                     printStream.close();
 
-                    // Si la conexion es con el nodo
-                } else if (socketServerPORT == 8080) {
-                    // Envia mensaje al nodo
-                    DataOutputStream ostream = new DataOutputStream(hostThreadSocket.getOutputStream());
-                    ostream.writeUTF("Hola desde el manager");
-                    ostream.flush();
-
-                    // Recibe mensaje del nodo
-                    InputStream istream = hostThreadSocket.getInputStream();
-                    ObjectInput in = new ObjectInputStream(istream);
-                    message = in.readUTF();
-                    //json = new JSONObject(message);
-                }
 
                 /*message += "replayed: " + msgReply + "\n";*/
 
@@ -148,6 +129,8 @@ public class ServerCliente {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                 message += "Something wrong! " + e.toString() + "\n";
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
             activity.runOnUiThread(new Runnable() {

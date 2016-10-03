@@ -3,15 +3,19 @@ package com.androidsrc.server;
 /**
  * Created by allan on 19/09/16.
  */
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class JsonManager {
+public class JsonManager{
+
     static String parser(String mensaje) throws JSONException {
         JSONObject parser = new JSONObject(mensaje);
         String respuesta="";
         String accion = parser.getString("Accion");
+        if(accion.equalsIgnoreCase("NodeConexion")){
+        }
         if(accion.equalsIgnoreCase("Conexion")){
             String UUID = GenerateUUID.crearUUID();
             String UUID64 = GenerateBase64.generar(UUID);

@@ -20,6 +20,7 @@ import java.net.SocketException;
 import java.util.Enumeration;
 
 public class Manager {
+
 	MainActivity activity;
 	ServerSocket serverSocket;
     NodeMap listaNodos;
@@ -115,6 +116,9 @@ public class Manager {
                 InputStream istream = hostThreadSocket.getInputStream();
                 ObjectInput in = new ObjectInputStream(istream);
                 message = in.readUTF();
+				JsonManager.parser(message);
+				activity.pasar();
+
                 json = new JSONObject(message);
 
 
