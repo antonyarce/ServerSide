@@ -15,6 +15,7 @@ public class JsonManager{
         String respuesta="";
         String accion = parser.getString("Accion");
         if(accion.equalsIgnoreCase("NodeConexion")){
+            respuesta="{Estado:ConexionExitosa}";
         }
         if(accion.equalsIgnoreCase("Conexion")){
             String UUID = GenerateUUID.crearUUID();

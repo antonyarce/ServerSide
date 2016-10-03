@@ -106,17 +106,19 @@ public class Manager {
             MeshNode node;
 
 			try {
-                // Envia mensaje al cliente
-                DataOutputStream ostream = new DataOutputStream(hostThreadSocket.getOutputStream());
-                ostream.writeUTF(msgReply);
-                ostream.flush();
+
 
 
                 // Recibe mensaje del cliente
                 InputStream istream = hostThreadSocket.getInputStream();
                 ObjectInput in = new ObjectInputStream(istream);
                 message = in.readUTF();
-				JsonManager.parser(message);
+
+
+				// Envia mensaje al cliente
+				DataOutputStream ostream = new DataOutputStream(hostThreadSocket.getOutputStream());
+				ostream.writeUTF(JsonManager.parser(message));
+				ostream.flush();
 				activity.pasar();
 
                 json = new JSONObject(message);
