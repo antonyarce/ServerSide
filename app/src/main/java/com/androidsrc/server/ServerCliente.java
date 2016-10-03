@@ -117,7 +117,7 @@ public class ServerCliente {
                 if (socketServerPORT == 9090) {
                     outputStream = hostThreadSocket.getOutputStream();
                     PrintStream printStream = new PrintStream(outputStream);
-                    printStream.print(JsonManager.parser(texto));
+                    printStream.print("Hola desde el manager");
                     printStream.close();
 
                     // Si la conexion es con el nodo
@@ -148,8 +148,6 @@ public class ServerCliente {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
                 message += "Something wrong! " + e.toString() + "\n";
-            } catch (JSONException e) {
-                e.printStackTrace();
             }
 
             activity.runOnUiThread(new Runnable() {
