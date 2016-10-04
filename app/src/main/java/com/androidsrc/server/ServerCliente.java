@@ -64,11 +64,10 @@ public class ServerCliente {
                     count++;
 
                     // Recibe, si es mensaje del cliente
-                    if (socketServerPORT == 9090) {
-                        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                        texto = in.readLine();
-                        System.out.println(texto);
-                    }
+
+                    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    texto = in.readLine();
+                    System.out.println(texto);
 
                     /*message += "#" + count + " from "
                             + socket.getInetAddress() + ":"
@@ -108,7 +107,6 @@ public class ServerCliente {
         public void run() {
             OutputStream outputStream;
             try {
-                //Envia, si recibio del cliente
                     outputStream = hostThreadSocket.getOutputStream();
                     PrintStream printStream = new PrintStream(outputStream);
                     printStream.print(JsonManager.parser(texto));

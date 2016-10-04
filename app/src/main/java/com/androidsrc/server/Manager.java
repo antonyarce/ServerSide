@@ -3,15 +3,11 @@ package com.androidsrc.server;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInput;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.ServerSocket;
@@ -113,16 +109,13 @@ public class Manager {
                 InputStream istream = hostThreadSocket.getInputStream();
                 ObjectInput in = new ObjectInputStream(istream);
                 message = in.readUTF();
-
+				JsonManager.parser(message);
+				activity.pasar();
 
 				// Envia mensaje al cliente
 				DataOutputStream ostream = new DataOutputStream(hostThreadSocket.getOutputStream());
 				ostream.writeUTF(JsonManager.parser(message));
 				ostream.flush();
-				activity.pasar();
-
-                json = new JSONObject(message);
-
 
                 activity.runOnUiThread(new Runnable() {
 
@@ -133,43 +126,17 @@ public class Manager {
                 });
 
 
-                if (json.getString("tipo") == "meshMemNode"){
-                    node = new MeshNode(hostThreadSocket.getInetAddress().toString(),
-                            json.getInt("puerto"),
-                            json.getInt("numero"),
-                            json.getInt("bytesDisp"), 0);
-                    NodeMap listaTemp = listaNodos;
-                    listaNodos.actualizar(node,listaTemp);
-                    listaNodos = listaTemp;
-                } else if (json.getString("tipo") == "meshMemClient") {
-                    if ((node = listaNodos.buscarEspacio(json.getInt("bytesDato"),listaNodos)) != null){
-                        Socket socket = new Socket(node.ip, node.puerto);
 
-                        JSONObject json = new JSONObject();
-
-                        json.put("dato", "hola mundo");
-
-                        //Recibe mensaje del servidor
-                        DataInputStream istream2 = new DataInputStream(socket.getInputStream());
-                        message = istream2.readUTF();
-
-                        // Envia mensaje al servidor
-                        OutputStream ostream2 = socket.getOutputStream();
-                        ObjectOutput s = new ObjectOutputStream(ostream2);
-                        s.writeUTF(json.toString());
-                        s.flush();
-                    }
-                }
 
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				message += "Something wrong! " + e.toString() + "\n";
 			} catch (JSONException e) {
-                e.printStackTrace();
-            }
+				e.printStackTrace();
+			}
 
-            activity.runOnUiThread(new Runnable() {
+			activity.runOnUiThread(new Runnable() {
 
 				@Override
 				public void run() {
