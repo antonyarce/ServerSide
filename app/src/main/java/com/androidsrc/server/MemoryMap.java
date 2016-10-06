@@ -2,9 +2,9 @@ package com.androidsrc.server;
 
 /**
  * Created by allan on 27/09/16.
-
+*/
 public class MemoryMap {
-    public NodoDoble inicio,fin;
+    public MemoryBlock inicio,fin;
 
     public MemoryMap(){
         inicio=fin=null;
@@ -15,7 +15,7 @@ public class MemoryMap {
         return inicio==null;
     }
 
-    public MeshNode actualizar(MeshNode meshNode, NodeMap lista){
+ /*   public MeshNode actualizar(MeshNode meshNode, NodeMap lista){
         if (lista.inicio == null) {
             lista.agregarInicio(meshNode);
             return null;
@@ -41,23 +41,23 @@ public class MemoryMap {
             return buscarEspacio(bytes, lista);
         }
     }
+*/
 
-
-    public void agregarFinal(MeshNode ele){
+    public void agregarFinal(String UUIDSPACE,String IDMESH,int SIZE){
         if (!estaVacia()){
-            fin= new NodoDoble(ele, null, fin);
+            fin= new MemoryBlock(UUIDSPACE,IDMESH,SIZE,null,fin);
             fin.anterior.siguiente=fin;
         }else{
-            inicio=fin=new NodoDoble(ele);
+            inicio=fin=new MemoryBlock(UUIDSPACE,IDMESH,SIZE);
         }
     }
 
-    public void agregarInicio(MeshNode ele){
+    public void agregarInicio(String UUIDSPACE,String IDMESH,int SIZE){
         if (!estaVacia()){
-            inicio=new NodoDoble(ele, inicio, null);
+            inicio=new MemoryBlock(UUIDSPACE, IDMESH, SIZE, inicio, null);
             inicio.siguiente.anterior= inicio;
         }else{
-            inicio=fin=new NodoDoble(ele);
+            inicio=fin=new MemoryBlock( UUIDSPACE, IDMESH, SIZE);
         }
     }
 
@@ -65,11 +65,10 @@ public class MemoryMap {
     public String mostrarInicioFin(){
         String datos="<=>";
         if(!estaVacia()){
-            NodoDoble auxiliar = inicio;
+            MemoryBlock auxiliar = inicio;
             while (auxiliar!=null){
-                datos = datos + "{"+auxiliar.dato+"}"+"<=>";
+                datos = datos + "{"+auxiliar.getUUIDspace()+"}"+"<=>";
                 auxiliar=auxiliar.siguiente;
-
             }
         }
         return datos;
@@ -79,9 +78,9 @@ public class MemoryMap {
     public String mostrarFinInicio(){
         String datos="<=>";
         if(!estaVacia()){
-            NodoDoble auxiliar = fin;
+            MemoryBlock auxiliar = fin;
             while (auxiliar!=null){
-                datos = datos + "{"+auxiliar.dato+"}"+"<=>";
+                datos = datos + "{"+auxiliar.getUUIDspace()+"}"+"<=>";
                 auxiliar=auxiliar.anterior;
 
             }
@@ -89,15 +88,14 @@ public class MemoryMap {
         return datos;
     }
 
-    public Object buscar(Object elemento){
-        NodoDoble auxiliar=inicio;
-        for ( ; auxiliar != null && !elemento.equals(auxiliar.dato); auxiliar = auxiliar.siguiente);
+    public MemoryBlock buscar(String idBuscado){
+        MemoryBlock auxiliar=inicio;
+        for ( ; auxiliar != null && !idBuscado.equals(auxiliar.getUUIDspace()); auxiliar = auxiliar.siguiente);
         if(auxiliar==null){
             return null;
         }else{
-            return auxiliar.dato;
+            return auxiliar;
         }
-
     }
 
 
@@ -121,29 +119,62 @@ public class MemoryMap {
     }
 
 
-    public void borrar(Object dato){
-        NodoDoble buscado = null;
-        NodoDoble iterador = inicio;
-        if(inicio==fin){
-            inicio=fin=null;
-        }else if (dato.equals(inicio.dato)){
-            inicio=inicio.siguiente;
-            inicio.anterior=null;
-        }else if (dato.equals(fin.dato)){
-            fin=fin.anterior;
-            fin.siguiente=null;
-        }else{
-            while ( buscado == null && iterador != null ) {
-                if ( dato.equals(iterador.dato)) {
+    public void borrar(String id) {
+        MemoryBlock buscado = null;
+        MemoryBlock iterador = inicio;
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else if (id.equals(inicio.getUUIDspace())) {
+            inicio = inicio.siguiente;
+            inicio.anterior = null;
+        } else if (id.equals(fin.getUUIDspace())) {
+            fin = fin.anterior;
+            fin.siguiente = null;
+        } else {
+            while (buscado == null && iterador != null) {
+                if (id.equals(iterador.getUUIDspace())) {
                     buscado = iterador;
                 }
                 iterador = iterador.siguiente;
             }
-            buscado.anterior.siguiente=buscado.siguiente;
-            buscado.siguiente.anterior=buscado.anterior;
+            buscado.anterior.siguiente = buscado.siguiente;
+            buscado.siguiente.anterior = buscado.anterior;
+        }
+    }
+    public int tamaño() {
+        int cant = 0;
+        MemoryBlock tmp = inicio;
+        while (tmp != null) {
+            tmp = tmp.siguiente;
+            cant++;
+        }
+        return cant;
+    }
+
+    public void borrarPosicion(int pos) {
+        MemoryBlock iterador = inicio;
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else if (pos <= tamaño() - 1) {
+            if (pos == 0) {
+                inicio = inicio.siguiente;
+                inicio.anterior = null;
+            } else if (pos == tamaño() - 1) {
+                fin = fin.anterior;
+                fin.siguiente = null;
+            } else {
+                for (int i = 0; i <= pos - 1; i++) {
+                    iterador = iterador.siguiente;
+                }
+                MemoryBlock tmpsiguiente = iterador.siguiente;
+                tmpsiguiente = tmpsiguiente.siguiente;
+                iterador.siguiente = tmpsiguiente;
+                if (tmpsiguiente != null) {
+                    tmpsiguiente.anterior = iterador;
+                }
+            }
+        } else if(pos >= tamaño()){
+            System.out.println("Error posición es mayor al tamaño de la lista");
         }
     }
 }
-*/
-
-
