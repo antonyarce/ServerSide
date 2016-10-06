@@ -21,6 +21,9 @@ public class JsonManager{
             String UUID = GenerateUUID.crearUUID();
             String UUID64 = GenerateBase64.generar(UUID);
             respuesta="{\"Token\":\""+UUID64+"\"}";
+            /*Client cliente = new Client("172.26.6.35",21000,"Hola");
+            cliente.execute();
+            cliente=null;*/
             System.out.println("UUID:"+UUID);
             System.out.println("UUID64:"+UUID64);
         }if(accion.equalsIgnoreCase("xmalloc")){
@@ -34,6 +37,12 @@ public class JsonManager{
             String tokenrecibido = parser.getString("Token");
             String datoasignar = parser.getString("Dato");
             String idEspacio = parser.getString("ID");
+            JSONObject json = new JSONObject();
+            json.put("Accion","Guardar");
+            json.put("Dato",datoasignar);
+            Client cliente = new Client("172.26.6.35",21000,json.toString());
+            cliente.execute();
+            cliente=null;
         }if (accion.equalsIgnoreCase("xFree")){
             String tokenrecibido = parser.getString("Token");
             String idLiberar = parser.getString("ID");

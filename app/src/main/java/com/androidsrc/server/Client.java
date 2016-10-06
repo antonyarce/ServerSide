@@ -4,6 +4,10 @@ package com.androidsrc.server;
  * Created by antonyarce on 12/9/16.
  */
 
+import android.os.AsyncTask;
+
+import org.json.JSONObject;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectOutput;
@@ -11,11 +15,6 @@ import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import android.os.AsyncTask;
-import android.widget.TextView;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 
 public class Client extends AsyncTask<Void, Void, Void> {
@@ -23,16 +22,16 @@ public class Client extends AsyncTask<Void, Void, Void> {
     String dstAddress;
     int dstPort;
     String response = "";
-    TextView textResponse;
     Socket socket;
     JSONObject json;
+    String mensaje;
 
 
-    Client(String addr, int port,TextView textResponse) {
+    Client(String addr, int port,String mensaje) {
         dstAddress = addr;
         dstPort = port;
-        this.textResponse=textResponse;
-
+        this.mensaje=mensaje;
+        System.out.println(mensaje);
     }
 
 
@@ -43,19 +42,19 @@ public class Client extends AsyncTask<Void, Void, Void> {
         try {
             socket = new Socket(dstAddress, dstPort);
 
-            JSONObject json = new JSONObject();
 
-            json.put("dato", "hola mundo");
 
-            //Recibe mensaje del servidor
-            DataInputStream istream = new DataInputStream(socket.getInputStream());
-            response = istream.readUTF();
+
 
             // Envia mensaje al servidor
             OutputStream ostream = socket.getOutputStream();
             ObjectOutput s = new ObjectOutputStream(ostream);
-            s.writeUTF(json.toString());
+            s.writeUTF(mensaje);
             s.flush();
+
+            //Recibe mensaje del servidor
+            DataInputStream istream = new DataInputStream(socket.getInputStream());
+            response = istream.readUTF();
 
 
         } catch (UnknownHostException e) {
@@ -66,9 +65,7 @@ public class Client extends AsyncTask<Void, Void, Void> {
             // TODO Auto-generated catch block
             e.printStackTrace();
             response = "IOException: " + e.toString();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } finally {
+        }finally {
             if (socket != null) {
                 try {
                     socket.close();
@@ -83,7 +80,6 @@ public class Client extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPostExecute(Void result) {
-        textResponse.setText(response);
         super.onPostExecute(result);
     }
 
