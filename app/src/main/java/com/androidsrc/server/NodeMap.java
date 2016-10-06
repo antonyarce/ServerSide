@@ -3,73 +3,61 @@ package com.androidsrc.server;
 /**
  * Created by antonyarce on 10/9/16.
  */
+
+
+
+// Lista que tiene como NodoDobles, objetos de tipo MeshNode
 public class NodeMap {
 
-    public NodoDoble inicio,fin;
+    public MeshNode inicio, fin;
 
-    public NodeMap(){
-        inicio=fin=null;
+    public NodeMap() {
+        inicio = fin = null;
     }
 
 
-    public boolean estaVacia(){
-        return inicio==null;
+    //Retorna un boolean indicando si la lista está vacía
+    public boolean estaVacia() {
+        return inicio == null;
     }
 
-    public MeshNode actualizar(MeshNode meshNode, NodeMap lista){
-        if (lista.inicio == null) {
-            lista.agregarInicio(meshNode);
-            return null;
-        } else if (meshNode.ip == lista.inicio.dato.ip){
-            return lista.inicio.dato;
+
+    public void agregarFinal(String ip, int port, int num, int bytesTotales) {
+        if (!estaVacia()) {
+            fin = new MeshNode(ip, port, num, bytesTotales, null, fin);
+            fin.anterior.siguiente = fin;
         } else {
-            NodoDoble nodoTemp = lista.inicio;
-            lista.borrarInicio();
-            lista.fin.siguiente = nodoTemp;
-            return actualizar(meshNode, lista);
+            inicio = fin = new MeshNode(ip, port, num, bytesTotales);
         }
     }
 
-    public MeshNode buscarEspacio(int bytes, NodeMap lista){
-        if (lista.inicio == null) {
-            return null;
-        } else if ((lista.inicio.dato.bytesTot-lista.inicio.dato.bytesUso) >= bytes){
-            return lista.inicio.dato;
+    public int tamaño() {
+        int cant = 0;
+        MeshNode tmp = inicio;
+        while (tmp != null) {
+            tmp = tmp.siguiente;
+            cant++;
+        }
+        return cant;
+    }
+
+    public void agregarInicio(String ip, int port, int num, int bytesTotales) {
+        if (!estaVacia()) {
+            inicio = new MeshNode(ip, port, num, bytesTotales, inicio, null);
+            inicio.siguiente.anterior = inicio;
         } else {
-            NodoDoble nodoTemp = lista.inicio;
-            lista.borrarInicio();
-            lista.fin.siguiente = nodoTemp;
-            return buscarEspacio(bytes, lista);
+            inicio = fin = new MeshNode(ip, port, num, bytesTotales);
         }
     }
 
 
-    public void agregarFinal(MeshNode ele){
-        if (!estaVacia()){
-            fin= new NodoDoble(ele, null, fin);
-            fin.anterior.siguiente=fin;
-        }else{
-            inicio=fin=new NodoDoble(ele);
-        }
-    }
-
-    public void agregarInicio(MeshNode ele){
-        if (!estaVacia()){
-            inicio=new NodoDoble(ele, inicio, null);
-            inicio.siguiente.anterior= inicio;
-        }else{
-            inicio=fin=new NodoDoble(ele);
-        }
-    }
-
-
-    public String mostrarInicioFin(){
-        String datos="<=>";
-        if(!estaVacia()){
-            NodoDoble auxiliar = inicio;
-            while (auxiliar!=null){
-                datos = datos + "{"+auxiliar.dato+"}"+"<=>";
-                auxiliar=auxiliar.siguiente;
+    public String mostrarInicioFin() {
+        String datos = "<=>";
+        if (!estaVacia()) {
+            MeshNode auxiliar = inicio;
+            while (auxiliar != null) {
+                datos = datos + "{" + auxiliar.ip + "}" + "<=>";
+                auxiliar = auxiliar.siguiente;
 
             }
         }
@@ -77,71 +65,99 @@ public class NodeMap {
     }
 
 
-    public String mostrarFinInicio(){
-        String datos="<=>";
-        if(!estaVacia()){
-            NodoDoble auxiliar = fin;
-            while (auxiliar!=null){
-                datos = datos + "{"+auxiliar.dato+"}"+"<=>";
-                auxiliar=auxiliar.anterior;
+    public String mostrarFinInicio() {
+        String datos = "<=>";
+        if (!estaVacia()) {
+            MeshNode auxiliar = fin;
+            while (auxiliar != null) {
+                datos = datos + "{" + auxiliar.ip + "}" + "<=>";
+                auxiliar = auxiliar.anterior;
 
             }
         }
         return datos;
     }
 
-    public Object buscar(Object elemento){
-        NodoDoble auxiliar=inicio;
-        for ( ; auxiliar != null && !elemento.equals(auxiliar.dato); auxiliar = auxiliar.siguiente);
-        if(auxiliar==null){
+    //
+    public MeshNode buscar(String ip) {
+        MeshNode auxiliar = inicio;
+        for (; auxiliar != null && !ip.equals(auxiliar.getIp()); auxiliar = auxiliar.siguiente) ;
+        if (auxiliar == null) {
             return null;
-        }else{
-            return auxiliar.dato;
+        } else {
+            return auxiliar;
         }
 
     }
 
 
-    public void borrarInicio(){
-        if(inicio==fin){
-            inicio=fin=null;
-        }else{
-            inicio=inicio.siguiente;
-            inicio.anterior=null;
+    public void borrarInicio() {
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else {
+            inicio = inicio.siguiente;
+            inicio.anterior = null;
         }
     }
 
 
-    public void borrarFinal(){
-        if(inicio==fin){
-            inicio=fin=null;
-        }else{
-            fin=fin.anterior;
-            fin.siguiente=null;
+    public void borrarFinal() {
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else {
+            fin = fin.anterior;
+            fin.siguiente = null;
         }
     }
 
 
-    public void borrar(Object dato){
-        NodoDoble buscado = null;
-        NodoDoble iterador = inicio;
-        if(inicio==fin){
-            inicio=fin=null;
-        }else if (dato.equals(inicio.dato)){
-            inicio=inicio.siguiente;
-            inicio.anterior=null;
-        }else if (dato.equals(fin.dato)){
-            fin=fin.anterior;
-            fin.siguiente=null;
-        }else{
-            while ( buscado == null && iterador != null ) {
-                if ( dato.equals(iterador.dato)) {
+    public void borrar(String ip) {
+        MeshNode buscado = null;
+        MeshNode iterador = inicio;
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else if (ip.equals(inicio.getIp())) {
+            inicio = inicio.siguiente;
+            inicio.anterior = null;
+        } else if (ip.equals(fin.getIp())) {
+            fin = fin.anterior;
+            fin.siguiente = null;
+        } else {
+            while (buscado == null && iterador != null) {
+                if (ip.equals(iterador.getIp())) {
                     buscado = iterador;
                 }
                 iterador = iterador.siguiente;
             }
-            buscado.anterior.siguiente=buscado.siguiente;
-            buscado.siguiente.anterior=buscado.anterior;
+            buscado.anterior.siguiente = buscado.siguiente;
+            buscado.siguiente.anterior = buscado.anterior;
+        }
+    }
+
+    public void borrarPosicion(int pos) {
+        MeshNode iterador = inicio;
+        if (inicio == fin) {
+            inicio = fin = null;
+        } else if (pos <= tamaño() - 1) {
+            if (pos == 0) {
+                inicio = inicio.siguiente;
+                inicio.anterior = null;
+            } else if (pos == tamaño() - 1) {
+                fin = fin.anterior;
+                fin.siguiente = null;
+            } else {
+                for (int i = 0; i <= pos - 1; i++) {
+                    iterador = iterador.siguiente;
+                }
+                MeshNode tmpsiguiente = iterador.siguiente;
+                tmpsiguiente = tmpsiguiente.siguiente;
+                iterador.siguiente = tmpsiguiente;
+                if (tmpsiguiente != null) {
+                    tmpsiguiente.anterior = iterador;
+                }
+            }
+        } else if(pos >= tamaño()){
+            System.out.println("Error posición es mayor al tamaño de la lista");
         }
     }
 }

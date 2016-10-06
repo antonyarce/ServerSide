@@ -5,17 +5,17 @@ package com.androidsrc.server;
  */
 
 public class NodoDoble {
-    public MeshNode dato;
+    public String ip;
+    public int num, bytesTot, bytesUso, bytedisponibles;
     NodoDoble siguiente,anterior;
 
     //Constructor para cuando aun no hay nodos
-    public NodoDoble(MeshNode ele){
-        this(ele,null,null);
+    public NodoDoble(String IP,int NUM, int BYTESTOTALES){
+        this(IP,NUM,BYTESTOTALES,null,null);
     }
 
     //Constructor para cuando ya hay nodos
-    public NodoDoble(MeshNode ele, NodoDoble sig, NodoDoble ant) {
-        dato=ele;
+    public NodoDoble(String IP,int NUM, int BYTESTOTALES, NodoDoble sig, NodoDoble ant) {
         siguiente=sig;
         anterior=ant;
     }

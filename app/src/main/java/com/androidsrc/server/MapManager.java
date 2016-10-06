@@ -5,7 +5,6 @@ package com.androidsrc.server;
  */
 public class MapManager {
     public static MemoryBlock listaDeBloques;
-    public static MemoryMap listaDeNodos;
 
 
 }
