@@ -4,31 +4,56 @@ package com.androidsrc.server;
  * Created by allan on 27/09/16.
  */
 public class MemoryBlock {
-    String idMeshNode;
-    String UUIDBlock;
-    int size;
-    String idMeshNode2;
+    public String UUIDspace;
+    public String idMeshNode;
+    public int size;
+    public boolean _Free;
+    MemoryBlock siguiente,anterior;
 
-    MemoryBlock(String idMeshNode, int size, String idMeshNode2){
-        this.idMeshNode=idMeshNode;
-        this.idMeshNode2=idMeshNode2;
-        this.size=size;
-        UUIDBlock=GenerateUUID.crearUUID();
-
-    }
-    public String getUUUID(){
-        return UUIDBlock;
+    //Constructor para cuando aun no hay nodos
+    public MemoryBlock(String ID,String IDMESH,int SIZE){
+        this(ID,IDMESH,SIZE,null,null);
     }
 
-    public String getIdMeshNode(){
+    //Constructor para cuando ya hay nodos
+    public MemoryBlock(String ID,String IDMESH,int SIZE, MemoryBlock sig, MemoryBlock ant) {
+        UUIDspace=ID;
+        idMeshNode=IDMESH;
+        size=SIZE;
+        siguiente=sig;
+        anterior=ant;
+    }
+
+    public String getUUIDspace() {
+        return UUIDspace;
+    }
+
+    public void setUUIDspace(String UUIDspace) {
+        this.UUIDspace = UUIDspace;
+    }
+
+    public String getIdMeshNode() {
         return idMeshNode;
     }
 
-    public String getIdMeshNode2(){
-        return idMeshNode2;
+    public void setIdMeshNode(String idMeshNode) {
+        this.idMeshNode = idMeshNode;
     }
-    public int getSize(){
+
+    public int getSize() {
         return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public boolean is_Free() {
+        return _Free;
+    }
+
+    public void set_Free(boolean _Free) {
+        this._Free = _Free;
     }
 
 

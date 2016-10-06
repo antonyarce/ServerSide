@@ -24,6 +24,7 @@ public class MeshNode {
         bytesTot=BYTESTOTALES;
         siguiente=sig;
         anterior=ant;
+        _Free=false;
     }
 
     public String getId() {

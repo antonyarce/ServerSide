@@ -56,7 +56,7 @@ public class NodeMap {
         if (!estaVacia()) {
             MeshNode auxiliar = inicio;
             while (auxiliar != null) {
-                datos = datos + "{" + auxiliar.ip + "}" + "<=>";
+                datos = datos + "{" + auxiliar.getId() + "}" + "<=>";
                 auxiliar = auxiliar.siguiente;
 
             }
@@ -70,7 +70,7 @@ public class NodeMap {
         if (!estaVacia()) {
             MeshNode auxiliar = fin;
             while (auxiliar != null) {
-                datos = datos + "{" + auxiliar.ip + "}" + "<=>";
+                datos = datos + "{" + auxiliar.getId() + "}" + "<=>";
                 auxiliar = auxiliar.anterior;
 
             }
