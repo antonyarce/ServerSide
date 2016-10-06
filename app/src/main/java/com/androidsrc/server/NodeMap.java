@@ -22,12 +22,12 @@ public class NodeMap {
     }
 
 
-    public void agregarFinal(String ip, int port, int num, int bytesTotales) {
+    public void agregarFinal(String ip, int port, int num, int bytesTotales,String id) {
         if (!estaVacia()) {
-            fin = new MeshNode(ip, port, num, bytesTotales, null, fin);
+            fin = new MeshNode(ip, port, num, bytesTotales,id, null, fin);
             fin.anterior.siguiente = fin;
         } else {
-            inicio = fin = new MeshNode(ip, port, num, bytesTotales);
+            inicio = fin = new MeshNode(ip, port, num, bytesTotales,id);
         }
     }
 
@@ -41,12 +41,12 @@ public class NodeMap {
         return cant;
     }
 
-    public void agregarInicio(String ip, int port, int num, int bytesTotales) {
+    public void agregarInicio(String ip, int port, int num, int bytesTotales,String id) {
         if (!estaVacia()) {
-            inicio = new MeshNode(ip, port, num, bytesTotales, inicio, null);
+            inicio = new MeshNode(ip, port, num, bytesTotales, id, inicio, null);
             inicio.siguiente.anterior = inicio;
         } else {
-            inicio = fin = new MeshNode(ip, port, num, bytesTotales);
+            inicio = fin = new MeshNode(ip, port, num, bytesTotales,id);
         }
     }
 
@@ -79,9 +79,9 @@ public class NodeMap {
     }
 
     //
-    public MeshNode buscar(String ip) {
+    public MeshNode buscar(String id) {
         MeshNode auxiliar = inicio;
-        for (; auxiliar != null && !ip.equals(auxiliar.getIp()); auxiliar = auxiliar.siguiente) ;
+        for (; auxiliar != null && !id.equals(auxiliar.getId()); auxiliar = auxiliar.siguiente) ;
         if (auxiliar == null) {
             return null;
         } else {
@@ -111,20 +111,20 @@ public class NodeMap {
     }
 
 
-    public void borrar(String ip) {
+    public void borrar(String id) {
         MeshNode buscado = null;
         MeshNode iterador = inicio;
         if (inicio == fin) {
             inicio = fin = null;
-        } else if (ip.equals(inicio.getIp())) {
+        } else if (id.equals(inicio.getId())) {
             inicio = inicio.siguiente;
             inicio.anterior = null;
-        } else if (ip.equals(fin.getIp())) {
+        } else if (id.equals(fin.getId())) {
             fin = fin.anterior;
             fin.siguiente = null;
         } else {
             while (buscado == null && iterador != null) {
-                if (ip.equals(iterador.getIp())) {
+                if (id.equals(iterador.getId())) {
                     buscado = iterador;
                 }
                 iterador = iterador.siguiente;

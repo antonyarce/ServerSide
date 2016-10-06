@@ -5,23 +5,33 @@ package com.androidsrc.server;
  */
 public class MeshNode {
     public String ip;
+    public String id;
     public int num, port, bytesTot, bytesUso, bytedisponibles;
     public boolean _Free;
     MeshNode siguiente,anterior;
 
     //Constructor para cuando aun no hay nodos
-    public MeshNode(String IP,int PORT,int NUM, int BYTESTOTALES){
-        this(IP,PORT,NUM,BYTESTOTALES,null,null);
+    public MeshNode(String IP,int PORT,int NUM, int BYTESTOTALES,String ID){
+        this(IP,PORT,NUM,BYTESTOTALES,ID,null,null);
     }
 
     //Constructor para cuando ya hay nodos
-    public MeshNode(String IP,int PORT,int NUM, int BYTESTOTALES, MeshNode sig, MeshNode ant) {
+    public MeshNode(String IP,int PORT,int NUM, int BYTESTOTALES,String ID, MeshNode sig, MeshNode ant) {
+        id=ID;
         ip=IP;
         num=NUM;
         port=PORT;
         bytesTot=BYTESTOTALES;
         siguiente=sig;
         anterior=ant;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getBytedisponibles() {
