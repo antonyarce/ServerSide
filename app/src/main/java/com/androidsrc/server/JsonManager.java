@@ -42,9 +42,9 @@ public class JsonManager{
             System.out.println(accion);
 
             //Se comunica con el celular con el ip y puerto obtenido
-            MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
-            String iptofind= miNode.getIp();
-            int porttofind = miNode.getPort();
+            //MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
+            String iptofind = MapManager.listaMeshNodos.buscar(idMeshNode).getIp();
+            int porttofind = MapManager.listaMeshNodos.buscar(idMeshNode).getPort();
             String accionMensaje = "Agregar1";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\"}");
             
