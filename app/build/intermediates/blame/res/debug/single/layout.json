@@ -8,11 +8,27 @@
         "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/botones.xml"
     },
     {
+        "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/nodos.xml",
+        "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/nodos.xml"
+    },
+    {
+        "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/botones.xml",
+        "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/botones.xml"
+    },
+    {
         "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/nodos.xml",
         "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/nodos.xml"
     },
     {
         "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/memoria.xml",
+        "source": "/home/allan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/memoria.xml"
     }
 ]

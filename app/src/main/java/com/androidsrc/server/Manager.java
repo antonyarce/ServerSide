@@ -109,7 +109,7 @@ public class Manager {
                 InputStream istream = hostThreadSocket.getInputStream();
                 ObjectInput in = new ObjectInputStream(istream);
                 message = in.readUTF();
-				JsonManager.parser(message);
+				JsonManager.parserNode(message);
 				activity.pasar();
 
 				// Envia mensaje al cliente
