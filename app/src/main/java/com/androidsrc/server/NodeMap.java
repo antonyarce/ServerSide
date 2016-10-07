@@ -21,17 +21,6 @@ public class NodeMap {
         return inicio == null;
     }
 
-    public String buscarEspacio(int size) {
-        MeshNode auxiliar = inicio;
-        for (; auxiliar != null && !(size>auxiliar.getBytedisponibles()); auxiliar = auxiliar.siguiente) ;
-        if (auxiliar == null) {
-            return "Error, no hay campo";
-        } else {
-            System.out.println("Id del nodo: "+auxiliar.getId());
-            return auxiliar.getId();
-        }
-
-    }
 
 
 

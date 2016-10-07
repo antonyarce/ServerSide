@@ -8,6 +8,9 @@ public class MapManager {
     public static NodeMap listaMeshNodos = new NodeMap();
     private static int contador = 0;
 
+
+
+
     static String getContador() {
         contador = contador+1;
         return String.valueOf(contador);
@@ -19,8 +22,8 @@ public class MapManager {
         if (auxiliar == null) {
             return "Error, no hay campo";
         } else {
-            auxiliar.setBytesUso(size);
             auxiliar.setBytedisponibles(auxiliar.getBytedisponibles()-size);
+            auxiliar.setBytesUso(auxiliar.getBytesUso()+size);
             return auxiliar.getId();
         }
 

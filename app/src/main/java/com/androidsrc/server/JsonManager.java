@@ -22,6 +22,7 @@ public class JsonManager{
             /*Client cliente = new Client("172.26.6.35",21000,"Hola");
             cliente.execute();
             cliente=null;*/
+
         }if(accion.equalsIgnoreCase("xmalloc")){
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
