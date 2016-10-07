@@ -44,6 +44,8 @@ public class JsonManager{
             MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
             String iptofind= miNode.getIp();
             int porttofind = miNode.getPort();
+            String accionMensaje = "Agregar";
+            Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\"}");
             
 
         }if (accion.equalsIgnoreCase("xMalloc2")){
