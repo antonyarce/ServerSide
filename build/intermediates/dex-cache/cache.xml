@@ -3,57 +3,57 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-19.1.0_ae803b636001af64f4e61b33428ec8e9660a22f0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="fe41cd2f03d4cddd623ee0b89a8cce444971e88b">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_fd7e88b99893c51fc2a0a268bfb76d868ac8835d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\libs\commons-codec-1.10.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\2\commons-codec-1.10_1514b3334a5610af20ca818e80d4fe91b76468bc\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-19.1.0_37540d6e936bee7d89d9a65b56d308f95b39df49\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3dab7420fe6f9ff49cc2f0dc7c6f61f58554b18d">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_97fa24332bdb945e472a6ab9a70c38337787a099\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/libs/mpandroidchartlibrary-2-2-4.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
-        <dex dex="C:\Users\estadm.B-71734\AndroidStudioProjects\1\ServerSideAndroid\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_49d1d33c32c243aeb06dcde217af8a1f13c0ab58\classes.dex" />
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/mpandroidchartlibrary-2-2-4_2abebd202dc62f76e3f270599ecaca08af63d273/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/allan/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_0db14df62354138cc551bfd299521910d2b370ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-19.1.0_f232874520ed089e68d99ff49be0f6b51e93df99/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="08d35aae77a5348874d44b0cc2c4d5a744062fd6">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1475fc78ea31a70b305610dd3b0736e8c780acfa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="9e23d0038875e99ccd40c21bb6d327ce167da700">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_85bce1cc53c121fb98c8cb1ff7d0333b0bc28ac9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/libs/commons-codec-1.10.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
+        <dex dex="/home/allan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_649efbb4b3bf2370bb329e1d3cfe86fe9bdcc26e/classes.dex" />
     </item>
 
 </items>
