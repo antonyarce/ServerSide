@@ -24,13 +24,27 @@ public class JsonManager{
             cliente=null;*/
 
         }if(accion.equalsIgnoreCase("xmalloc")){
+
+            //Parsea los datos
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
-            String idMeshNode = MapManager.buscarEspacio(Integer.parseInt(size));
+
+            //Busca el id del primer MeshNode que cuenta con espacio suficiente
+            String idMeshNode = MapManager.buscarEspacio(Integer.parseInt(size));;
+
+            //Crea un MemoryBlock
             String UUIDEspacio = GenerateUUID.crearUUID();
             MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
+
+            //Mensaje para API en C++
             respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
             System.out.println(accion);
+
+            //Se comunica con el celular con el ip y puerto obtenido
+            MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
+            String iptofind= miNode.getIp();
+            int porttofind = miNode.getPort();
+            
 
         }if (accion.equalsIgnoreCase("xMalloc2")){
             String tokenrecibido = parser.getString("Token");
