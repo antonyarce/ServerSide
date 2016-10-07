@@ -55,6 +55,22 @@ public class JsonManager{
         String respuesta="";
         String accion = parser.getString("Accion");
         if(accion.equalsIgnoreCase("NodeConexion")){
+            String ip = parser.getString("Ip");
+            int puerto = parser.getInt("puerto");
+            int numero = parser.getInt("numero");
+            int bytesDisponibles = parser.getInt("bytesDisp");
+            String IDMeshNode = MapManager.getContador();
+
+            //Instanciar el nodo para agregarlo a la lista
+
+            MapManager.listaMeshNodos.agregarInicio(ip,puerto,numero,bytesDisponibles,IDMeshNode);
+            System.out.println(MapManager.listaMeshNodos.mostrarFinInicio());
+
+            //Aqui agrega el dato en la lista estatica
+
+
+
+
             respuesta="{\"Estado\":\"ConexionExitosa\"}";
         }
         return respuesta;
