@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
+
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
@@ -24,7 +25,7 @@ public class GraficNodes extends BotonesActivity {
         setContentView(mChart);
 
         mChart.setUsePercentValues(true);
-        mChart.setDescription("graficos prueba");
+        mChart.setDescription("Numero de telefono");
 
         mChart.setDrawHoleEnabled(true);
         mChart.setHoleRadius(7);
@@ -36,7 +37,7 @@ public class GraficNodes extends BotonesActivity {
         int contador = 1;
         while(nodos!=null){
             entries.add(new BarEntry(nodos.getBytedisponibles(),contador));
-            labels.add(String.valueOf(nodos.getNum()));
+            labels.add("id: " + String.valueOf(nodos.getId())+", bytes totales: "+String.valueOf(nodos.getBytesTot())+ ", bytes disponibles: " + String.valueOf(nodos.getBytedisponibles()));
             contador = contador +1;
             nodos= nodos.siguiente;
 
@@ -73,8 +74,5 @@ public class GraficNodes extends BotonesActivity {
 
         //Actualizar pie chart
         mChart.invalidate();
-
-
-
     }
 }
