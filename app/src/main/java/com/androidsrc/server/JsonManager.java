@@ -23,9 +23,6 @@ public class JsonManager{
             String UUID64 = GenerateBase64.generar(UUID);
             respuesta="{\"Token\":\""+UUID64+"\"}";
             System.out.println(accion);
-            /*Client cliente = new Client("172.26.6.35",21000,"Hola");
-            cliente.execute();
-            cliente=null;*/
 
         }if(accion.equalsIgnoreCase("xmalloc")){
 
@@ -56,6 +53,24 @@ public class JsonManager{
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
             String datoguardar = parser.getString("Dato");
+
+            //Busca el id del primer MeshNode que cuenta con espacio suficiente
+            String idMeshNode = MapManager.buscarEspacio(Integer.parseInt(size));;
+
+            //Crea un MemoryBlock
+            String UUIDEspacio = GenerateUUID.crearUUID();
+            MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
+
+            //Mensaje para API en C++
+            respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
+            System.out.println(accion);
+
+            //Se comunica con el celular con el ip y puerto obtenido
+            MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
+            String iptofind= miNode.getIp();
+            int porttofind = miNode.getPort();
+            String accionMensaje = "Agregar2";
+            Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\",\"Dato\":\""+datoguardar+"\"}");
 
 
         }if (accion.equalsIgnoreCase("xAssign")){
