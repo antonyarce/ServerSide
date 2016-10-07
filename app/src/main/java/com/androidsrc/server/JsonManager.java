@@ -86,8 +86,6 @@ public class JsonManager{
             String accionMensaje = "Liberar";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idLiberar+"\"}");
 
-
-
         }
         return respuesta;
 
