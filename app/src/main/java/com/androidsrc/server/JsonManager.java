@@ -93,9 +93,8 @@ public class JsonManager{
 
             //Obtengo el id del MeshNode al que pertenece y sus atributos
             String idMeshNode = miBloque.getIdMeshNode();
-            MeshNode miNodo = MapManager.listaMeshNodos.buscar(idMeshNode);
-            String iptofind = miNodo.getIp();
-            int porttofind = miNodo.getPort();
+            String iptofind = MapManager.listaMeshNodos.buscarip(idMeshNode);
+            int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Liberar";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idLiberar+"\"}");
 
