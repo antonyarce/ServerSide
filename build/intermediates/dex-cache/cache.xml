@@ -2,40 +2,58 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/Users/antonyarce/Documents/Android/Android SDK/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0_1fed32a5c690a84c63752e2709311110672eb46e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/libs/commons-codec-1.10.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/libs/commons-codec-1.10.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/pre-dexed/debug/commons-codec-1.10_ec73e05faacd4d201938e9c5c6dbffe07d7b1690.jar" />
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_a4b9fde0918dd781c59edb62634fc14b4eb2c7fb/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/jars/classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-19.1.0_8444f74f04ceb4123364d55402cb07e9a7b85093.jar" />
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-19.1.0_561b6ad2577626bbf5624c9bc7d79966c2e664c7/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/libs/mpandroidchartlibrary-2-2-4.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/dilan/Android/Sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-v4-19.1.0_1745ee725f77c3cfb531fb6e8b10bd03173ca0a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c6155fe0cf079ac28ebe33412c6523124c539cf4">
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cc72005c1956d95507b86d3517091e06c5a6a8aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ac40a6099d12c76bac127656dc37d913298ffb29">
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_23a46644d484d4d3261223e4289252eb9093f171/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/libs/mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/pre-dexed/debug/mpandroidchartlibrary-2-2-4_bffba96b41200897282ae1986a75999d441e6b22.jar" />
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/mpandroidchartlibrary-2-2-4_79f8a8e92ca7b215e464afcc59e5008dbddb16c7/classes.dex" />
     </item>
 
 </items>

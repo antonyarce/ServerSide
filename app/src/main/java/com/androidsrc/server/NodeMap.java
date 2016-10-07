@@ -92,6 +92,28 @@ public class NodeMap {
 
     }
 
+    public String buscarip(String id) {
+        MeshNode auxiliar = inicio;
+        for (; auxiliar != null && !id.equals(auxiliar.getId()); auxiliar = auxiliar.siguiente) ;
+        if (auxiliar == null) {
+            return null;
+        } else {
+            return auxiliar.getIp();
+        }
+
+    }
+
+    public int buscarport(String id) {
+        MeshNode auxiliar = inicio;
+        for (; auxiliar != null && !id.equals(auxiliar.getId()); auxiliar = auxiliar.siguiente) ;
+        if (auxiliar == null) {
+            return 0;
+        } else {
+            return auxiliar.getPort();
+        }
+
+    }
+
 
     public void borrarInicio() {
         if (inicio == fin) {

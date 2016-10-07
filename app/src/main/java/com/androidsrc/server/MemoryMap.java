@@ -81,6 +81,7 @@ public class MemoryMap {
     }
 
 
+
     public void borrarInicio(){
         if(inicio==fin){
             inicio=fin=null;

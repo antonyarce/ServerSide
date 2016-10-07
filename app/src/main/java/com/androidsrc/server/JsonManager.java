@@ -37,14 +37,17 @@ public class JsonManager{
             String UUIDEspacio = GenerateUUID.crearUUID();
             MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
 
+            System.out.println("Se agregó");
+
             //Mensaje para API en C++
             respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
             System.out.println(accion);
 
             //Se comunica con el celular con el ip y puerto obtenido
             //MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
-            String iptofind = MapManager.listaMeshNodos.buscar(idMeshNode).getIp();
-            int porttofind = MapManager.listaMeshNodos.buscar(idMeshNode).getPort();
+            String iptofind = MapManager.listaMeshNodos.buscarip(idMeshNode);
+            System.out.println("Este es el IP"+iptofind);
+            int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Agregar1";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\"}");
             
@@ -67,8 +70,8 @@ public class JsonManager{
 
             //Se comunica con el celular con el ip y puerto obtenido
             MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
-            String iptofind= miNode.getIp();
-            int porttofind = miNode.getPort();
+            String iptofind= MapManager.listaMeshNodos.buscarip(idMeshNode);
+            int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Agregar2";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\",\"Dato\":\""+datoguardar+"\"}");
 
