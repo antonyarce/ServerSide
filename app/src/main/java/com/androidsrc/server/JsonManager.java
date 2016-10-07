@@ -49,6 +49,8 @@ public class JsonManager{
         }
         System.out.println(accion);
         return respuesta;
+
+
     }
     static String parserNode(String mensaje) throws JSONException{
         JSONObject parser = new JSONObject(mensaje);
