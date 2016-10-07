@@ -32,7 +32,7 @@ public class BotonesActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(BotonesActivity.this,MemoryMapActivity.class);
+                Intent i = new Intent(BotonesActivity.this,GraficNodes.class);
                 startActivity(i);
 
             }

@@ -19,4 +19,6 @@ android {
 
 dependencies {
     compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/mpandroidchartlibrary-2-2-4.jar')
+    compile 'com.android.support:appcompat-v7:19.1.0'
 }
