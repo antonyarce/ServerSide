@@ -15,7 +15,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.util.Enumeration;
 
-public class Manager {
+public class ServerClient {
 
 	MainActivity activity;
 	ServerSocket serverSocket;
@@ -25,7 +25,7 @@ public class Manager {
     JSONObject json;
 
 
-	public Manager(MainActivity activity) {
+	public ServerClient(MainActivity activity) {
         this.activity = activity;
         listaNodos = new NodeMap();
 		Thread socketServerThread = new Thread(new SocketServerThread());

@@ -7,7 +7,8 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	Manager manager;
+	ServerClient server;
+	ServerClientC serverC;
 	TextView infoip, msg;
 	TextView response;
 
@@ -17,9 +18,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		infoip = (TextView) findViewById(R.id.infoip);
 		msg = (TextView) findViewById(R.id.msg);
-		manager = new Manager(this);
-		//ServerCliente serverc = new ServerCliente(this);
-		ServerCliente server = new ServerCliente(this, 9090);
+		server = new ServerClient(this);
+		serverC = new ServerClientC(this, 9090);
 		infoip.setText(server.getIpAddress()+":"+server.getPort());
 	}
 
@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		manager.onDestroy();
+		server.onDestroy();
 	}
 
 

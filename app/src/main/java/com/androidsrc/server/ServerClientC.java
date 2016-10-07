@@ -18,14 +18,14 @@ import java.net.SocketException;
 import java.util.Enumeration;
 
 
-public class ServerCliente {
+public class ServerClientC {
     MainActivity activity;
     ServerSocket serverSocket;
     String message = "";
     String texto;
     int socketServerPORT;
 
-    public ServerCliente(MainActivity activity, int port) {
+    public ServerClientC(MainActivity activity, int port) {
         this.activity = activity;
         socketServerPORT = port;
         Thread socketServerThread = new Thread(new SocketServerThread());
