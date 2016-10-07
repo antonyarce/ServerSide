@@ -87,6 +87,7 @@ public class JsonManager{
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idLiberar+"\"}");
 
 
+
         }
         return respuesta;
 
