@@ -76,6 +76,12 @@ public class JsonManager{
             String datoasignar = parser.getString("Dato");
             String idEspacio = parser.getString("UUID");
 
+            String idMeshNode = MapManager.listaDeBloques.buscaridMesh(idEspacio);
+            String iptofind = MapManager.listaMeshNodos.buscarip(idMeshNode);
+            int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
+            String accionMensaje="Asignar";
+            Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idEspacio+"\",\"Dato\":\""+datoasignar+"\"}");
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }if (accion.equalsIgnoreCase("xFree")){
             //Parsea los datos
