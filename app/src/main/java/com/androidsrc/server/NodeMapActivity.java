@@ -20,7 +20,7 @@ public class NodeMapActivity extends Activity {
         setContentView(R.layout.nodos);
         listN=(ListView)findViewById(R.id.listaN);
         arrayList = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.custom);
+        adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.custom,arrayList);
         listN.setAdapter(adapter);
         recorrer();
 
