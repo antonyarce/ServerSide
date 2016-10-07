@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml"
-    },
-    {
         "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_grafic_nodes.xml",
         "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_grafic_nodes.xml"
+    },
+    {
+        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item.xml",
+        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml"
     },
     {
         "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",

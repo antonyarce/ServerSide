@@ -44,13 +44,13 @@ public class JsonManager{
             System.out.println(accion);
 
             //Se comunica con el celular con el ip y puerto obtenido
-            //MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
             String iptofind = MapManager.listaMeshNodos.buscarip(idMeshNode);
+
             System.out.println("Este es el IP"+iptofind);
             int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Agregar1";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\"}");
-            
+
 
         }if (accion.equalsIgnoreCase("xMalloc2")){
             String tokenrecibido = parser.getString("Token");
@@ -69,7 +69,6 @@ public class JsonManager{
             System.out.println(accion);
 
             //Se comunica con el celular con el ip y puerto obtenido
-            MeshNode miNode = MapManager.listaMeshNodos.buscar(idMeshNode);
             String iptofind= MapManager.listaMeshNodos.buscarip(idMeshNode);
             int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Agregar2";
