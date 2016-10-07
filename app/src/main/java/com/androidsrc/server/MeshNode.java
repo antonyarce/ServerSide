@@ -21,7 +21,7 @@ public class MeshNode {
         ip=IP;
         num=NUM;
         port=PORT;
-        bytesTot=BYTESTOTALES;
+        bytesTot=bytedisponibles=BYTESTOTALES;
         siguiente=sig;
         anterior=ant;
         _Free=false;

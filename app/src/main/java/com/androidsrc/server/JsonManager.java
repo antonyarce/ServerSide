@@ -21,16 +21,16 @@ public class JsonManager{
             /*Client cliente = new Client("172.26.6.35",21000,"Hola");
             cliente.execute();
             cliente=null;*/
-            System.out.println("UUID:"+UUID);
-            System.out.println("UUID64:"+UUID64);
         }if(accion.equalsIgnoreCase("xmalloc")){
             String tokenrecibido = parser.getString("Token");
-            int size = parser.getInt("Size");
+            String size = parser.getString("Size");
+            MapManager.listaDeBloques.agregarInicio(GenerateUUID.crearUUID(),MapManager.getContador(),Integer.parseInt(size));
 
         }if (accion.equalsIgnoreCase("xMalloc")){
             String tokenrecibido = parser.getString("Token");
-            int size = parser.getInt("Size");
+            String size = parser.getString("Size");
             String datoguardar = parser.getString("Dato");
+
 
         }if (accion.equalsIgnoreCase("xAssign")){
             String tokenrecibido = parser.getString("Token");
@@ -39,9 +39,7 @@ public class JsonManager{
             JSONObject json = new JSONObject();
             json.put("Accion","Guardar");
             json.put("Dato",datoasignar);
-            Client cliente = new Client("172.26.6.35",21000,json.toString());
-            cliente.execute();
-            cliente=null;
+
 
         }if (accion.equalsIgnoreCase("xFree")){
             String tokenrecibido = parser.getString("Token");
