@@ -1,110 +1,110 @@
 [
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_grafic_nodes.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_grafic_nodes.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_list_item.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_tabbar.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tabbar.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/botones.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/botones.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_icon.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_bar.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_bar.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/memoria.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/memoria.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_include.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_include.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/botones.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/botones.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_title_item.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_view.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/nodos.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/nodos.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_include.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_include.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/support_simple_spinner_dropdown_item.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_mode_close_item.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_tabbar.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tabbar.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_decor_include.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_include.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_decor_overlay.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_overlay.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/memoria.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/memoria.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/activity_grafic_nodes.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/activity_grafic_nodes.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_checkbox.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_popup_menu_item_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_expanded_menu_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_view.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_tab.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tab.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_menu_item_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_expanded_menu_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/nodos.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/nodos.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_decor_include.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_include.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_home.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_home.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_tab.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_tab.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_checkbox.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
-        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/abc_action_bar_home.xml",
-        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_home.xml"
+        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/abc_action_bar_decor_overlay.xml",
+        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_action_bar_decor_overlay.xml"
     }
 ]

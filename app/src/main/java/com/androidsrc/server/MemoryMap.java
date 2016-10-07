@@ -15,33 +15,15 @@ public class MemoryMap {
         return inicio==null;
     }
 
- /*   public MeshNode actualizar(MeshNode meshNode, NodeMap lista){
-        if (lista.inicio == null) {
-            lista.agregarInicio(meshNode);
-            return null;
-        } else if (meshNode.ip == lista.inicio.dato.ip){
-            return lista.inicio.dato;
-        } else {
-            NodoDoble nodoTemp = lista.inicio;
-            lista.borrarInicio();
-            lista.fin.siguiente = nodoTemp;
-            return actualizar(meshNode, lista);
+    public void setFree(String idBuscado){
+        MemoryBlock auxiliar=inicio;
+        for ( ; auxiliar != null && !idBuscado.equals(auxiliar.getUUIDspace()); auxiliar = auxiliar.siguiente);
+        if(auxiliar==null){
+            System.out.print("No existe id buscado");
+        }else{
+            auxiliar.set_Free(true);
         }
     }
-
-    public MeshNode buscarEspacio(int bytes, NodeMap lista){
-        if (lista.inicio == null) {
-            return null;
-        } else if ((lista.inicio.dato.bytesTot-lista.inicio.dato.bytesUso) >= bytes){
-            return lista.inicio.dato;
-        } else {
-            NodoDoble nodoTemp = lista.inicio;
-            lista.borrarInicio();
-            lista.fin.siguiente = nodoTemp;
-            return buscarEspacio(bytes, lista);
-        }
-    }
-*/
 
     public void agregarFinal(String UUIDSPACE,String IDMESH,int SIZE){
         if (!estaVacia()){
