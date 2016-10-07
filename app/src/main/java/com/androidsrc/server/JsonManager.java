@@ -19,7 +19,7 @@ public class JsonManager{
             String UUID64 = GenerateBase64.generar(UUID);
             respuesta="{\"Token\":\""+UUID64+"\"}";
             System.out.println(accion);
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }if(accion.equalsIgnoreCase("xmalloc")){
 
             //Parsea los datos
@@ -47,7 +47,7 @@ public class JsonManager{
             String accionMensaje = "Agregar1";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\"}");
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }if (accion.equalsIgnoreCase("xMalloc2")){
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
@@ -70,16 +70,13 @@ public class JsonManager{
             String accionMensaje = "Agregar2";
             Client client = new Client(iptofind,porttofind,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\",\"Size\":\""+size+"\",\"Dato\":\""+datoguardar+"\"}");
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7
         }if (accion.equalsIgnoreCase("xAssign")){
             String tokenrecibido = parser.getString("Token");
             String datoasignar = parser.getString("Dato");
-            String idEspacio = parser.getString("ID");
-            JSONObject json = new JSONObject();
-            json.put("Accion","Guardar");
-            json.put("Dato",datoasignar);
+            String idEspacio = parser.getString("UUID");
 
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }if (accion.equalsIgnoreCase("xFree")){
             //Parsea los datos
             String tokenrecibido = parser.getString("Token");
@@ -88,11 +85,9 @@ public class JsonManager{
             //Settea el MemoryBlock como libre usando el idLiberar
             MapManager.listaDeBloques.setFree(idLiberar);
 
-            //Obtengo el MemoryBlock con el idliberar
-            MemoryBlock miBloque = MapManager.listaDeBloques.buscar(idLiberar);
 
             //Obtengo el id del MeshNode al que pertenece y sus atributos
-            String idMeshNode = miBloque.getIdMeshNode();
+            String idMeshNode = MapManager.listaDeBloques.buscaridMesh(idLiberar);
             String iptofind = MapManager.listaMeshNodos.buscarip(idMeshNode);
             int porttofind = MapManager.listaMeshNodos.buscarport(idMeshNode);
             String accionMensaje = "Liberar";

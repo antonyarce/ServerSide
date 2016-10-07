@@ -63,9 +63,6 @@ public class ServerClientC {
                     Socket socket = serverSocket.accept();
                     count++;
 
-                    MapManager.Garbage();
-                    MapManager.Burping();
-
                     // Recibe, si es mensaje del cliente
 
                     BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));

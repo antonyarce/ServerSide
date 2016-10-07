@@ -80,6 +80,16 @@ public class MemoryMap {
         }
     }
 
+    public String buscaridMesh(String id) {
+        MemoryBlock auxiliar = inicio;
+        for (; auxiliar != null && !id.equals(auxiliar.getUUIDspace()); auxiliar = auxiliar.siguiente) ;
+        if (auxiliar == null) {
+            return null;
+        } else {
+            return auxiliar.getIdMeshNode();
+        }
+
+    }
 
 
     public void borrarInicio(){
