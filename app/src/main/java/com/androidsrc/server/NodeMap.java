@@ -27,6 +27,7 @@ public class NodeMap {
         if (auxiliar == null) {
             return "Error, no hay campo";
         } else {
+            System.out.println("Id del nodo: "+auxiliar.getId());
             return auxiliar.getId();
         }
 

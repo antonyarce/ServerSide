@@ -18,6 +18,7 @@ public class JsonManager{
             String UUID = GenerateUUID.crearUUID();
             String UUID64 = GenerateBase64.generar(UUID);
             respuesta="{\"Token\":\""+UUID64+"\"}";
+            System.out.println(accion);
             /*Client cliente = new Client("172.26.6.35",21000,"Hola");
             cliente.execute();
             cliente=null;*/
@@ -28,6 +29,7 @@ public class JsonManager{
             String UUIDEspacio = GenerateUUID.crearUUID();
             MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
             respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
+            System.out.println(accion);
 
         }if (accion.equalsIgnoreCase("xMalloc")){
             String tokenrecibido = parser.getString("Token");
@@ -48,7 +50,6 @@ public class JsonManager{
             String tokenrecibido = parser.getString("Token");
             String idLiberar = parser.getString("ID");
         }
-        System.out.println(accion);
         return respuesta;
 
 
