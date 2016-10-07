@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/activity_main.xml"
+        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/memoria.xml",
+        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/memoria.xml"
     },
     {
-        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/memoria.xml",
-        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/memoria.xml"
+        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/botones.xml",
+        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/botones.xml"
     },
     {
-        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/nodos.xml",
-        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/nodos.xml"
+        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/nodos.xml",
+        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/nodos.xml"
     },
     {
-        "merged": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/res/merged/debug/layout/botones.xml",
-        "source": "/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/src/main/res/layout/botones.xml"
+        "merged": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/src/main/res/layout/activity_main.xml"
     }
 ]

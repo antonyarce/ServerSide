@@ -21,15 +21,16 @@ public class JsonManager{
             /*Client cliente = new Client("172.26.6.35",21000,"Hola");
             cliente.execute();
             cliente=null;*/
+
         }if(accion.equalsIgnoreCase("xmalloc")){
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
-            String idMeshNode = MapManager.listaMeshNodos.buscarEspacio(Integer.parseInt(size));
+            String idMeshNode = MapManager.buscarEspacio(Integer.parseInt(size));
             String UUIDEspacio = GenerateUUID.crearUUID();
             MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
             respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
 
-        }if (accion.equalsIgnoreCase("xMalloc")){
+        }if (accion.equalsIgnoreCase("xMalloc2")){
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
             String datoguardar = parser.getString("Dato");

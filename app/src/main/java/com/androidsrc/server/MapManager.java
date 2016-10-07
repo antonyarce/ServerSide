@@ -15,4 +15,17 @@ public class MapManager {
         contador = contador+1;
         return String.valueOf(contador);
     }
+
+    static String buscarEspacio(int size) {
+        MeshNode auxiliar = listaMeshNodos.inicio;
+        for (; auxiliar != null && !(size>auxiliar.getBytedisponibles()); auxiliar = auxiliar.siguiente) ;
+        if (auxiliar == null) {
+            return "Error, no hay campo";
+        } else {
+            auxiliar.setBytedisponibles(auxiliar.getBytedisponibles()-size);
+            auxiliar.setBytesUso(auxiliar.getBytesUso()+size);
+            return auxiliar.getId();
+        }
+
+    }
 }

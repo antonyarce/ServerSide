@@ -3,30 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="ffcfbb77250c29577cfa982cd4e3b60fce3f28e9">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_0ec14876a4070e205a274579c0cb673c6b264b51/classes.dex" />
+        sha1="5337fb6e0b9281309d904f67d871b7ce1da9ca2d">
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cc72005c1956d95507b86d3517091e06c5a6a8aa/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="566fb5e319b8add9241d76cd70cb398cef8f1828">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_1b36cadff33be5edfab4ca46617777e4226cba02/classes.dex" />
+        sha1="637507587c918404a1885a3abbfa9148e81164dd">
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_23a46644d484d4d3261223e4289252eb9093f171/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/libs/commons-codec-1.10.jar"
+        jar="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/libs/commons-codec-1.10.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="4b95f4897fa13f2cd904aee711aeafc0c5295cd8">
-        <dex dex="/Users/antonyarce/Documents/Android/AndroidStudioProjects/ManagerMM2/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_ec73e05faacd4d201938e9c5c6dbffe07d7b1690/classes.dex" />
+        <dex dex="/home/dilan/AndroidStudioProjects/ServerSideAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/2/commons-codec-1.10_a4b9fde0918dd781c59edb62634fc14b4eb2c7fb/classes.dex" />
     </item>
 
 </items>
