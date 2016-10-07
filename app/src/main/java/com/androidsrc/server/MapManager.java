@@ -28,4 +28,59 @@ public class MapManager {
         }
 
     }
+
+    static void Garbage(){
+        new Thread(new Runnable(){
+            @SuppressWarnings("unchecked")
+            @Override
+            public void run() {
+                    MemoryBlock temp = MapManager.listaDeBloques.inicio;
+                    for(int i = 0;i < MapManager.listaDeBloques.tamaño();i++){
+                        if(temp.is_Free()) {
+
+                            String idMeshNode = temp.getIdMeshNode();
+                            String ip = MapManager.listaMeshNodos.buscar(idMeshNode).getIp();
+                            int port = MapManager.listaMeshNodos.buscar(idMeshNode).getPort();
+                            String idGarbage = temp.getUUIDspace();
+
+                            int nuevosBytesDisp = MapManager.listaMeshNodos.buscar(idMeshNode).bytedisponibles + temp.getSize();
+                            MapManager.listaMeshNodos.buscar(idMeshNode).setBytedisponibles(nuevosBytesDisp);
+
+                            int nuevosBytesUso = MapManager.listaMeshNodos.buscar(idMeshNode).bytesUso - temp.getSize();
+                            MapManager.listaMeshNodos.buscar(idMeshNode).setBytesUso(nuevosBytesUso);
+
+                            String accionMensaje = "Garbage";
+                            Client client = new Client(ip,port,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idGarbage+"\",\"BytesDisp\":\""+Integer.toString(nuevosBytesDisp)+"\"}");
+
+                        }
+                        temp = temp.siguiente;
+                    }
+            }
+        }).start();
+    }
+
+    static void Burping(){
+        new Thread(new Runnable(){
+            @SuppressWarnings("unchecked")
+            @Override
+            public void run() {
+                MemoryBlock temp = MapManager.listaDeBloques.inicio;
+                for(int i = 0;i < MapManager.listaDeBloques.tamaño();i++){
+                    if(temp.is_Free()) {
+
+                        String ip = MapManager.listaMeshNodos.buscar(temp.getIdMeshNode()).getIp();
+                        int port = MapManager.listaMeshNodos.buscar(temp.getIdMeshNode()).getPort();
+                        String idBurping = temp.getUUIDspace();
+
+                        MapManager.listaDeBloques.borrar(idBurping);
+
+                        String accionMensaje = "Burping";
+                        Client client = new Client(ip,port,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idBurping+"\"}");
+
+                    }
+                    temp = temp.siguiente;
+                }
+            }
+        }).start();
+    }
 }
