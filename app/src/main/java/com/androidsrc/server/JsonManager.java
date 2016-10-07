@@ -24,7 +24,10 @@ public class JsonManager{
         }if(accion.equalsIgnoreCase("xmalloc")){
             String tokenrecibido = parser.getString("Token");
             String size = parser.getString("Size");
-            MapManager.listaDeBloques.agregarInicio(GenerateUUID.crearUUID(),MapManager.getContador(),Integer.parseInt(size));
+            String idMeshNode = MapManager.listaMeshNodos.buscarEspacio(Integer.parseInt(size));
+            String UUIDEspacio = GenerateUUID.crearUUID();
+            MapManager.listaDeBloques.agregarInicio(UUIDEspacio,idMeshNode,Integer.parseInt(size));
+            respuesta="{\"Token\":\""+tokenrecibido+"\",\"UUIDEspacio\":\""+UUIDEspacio+"\"}";
 
         }if (accion.equalsIgnoreCase("xMalloc")){
             String tokenrecibido = parser.getString("Token");

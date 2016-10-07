@@ -8,6 +8,9 @@ public class MapManager {
     public static NodeMap listaMeshNodos = new NodeMap();
     private static int contador = 0;
 
+
+
+
     static String getContador() {
         contador = contador+1;
         return String.valueOf(contador);
