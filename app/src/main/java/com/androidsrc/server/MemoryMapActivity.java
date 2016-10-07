@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 public class MemoryMapActivity extends Activity {
     ListView list;
-    ArrayList<String> arrayList;
-    ArrayAdapter<String> adapter;
+    static ArrayList<String> arrayList;
+    static ArrayAdapter<String> adapter;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.memoria);
@@ -23,5 +23,11 @@ public class MemoryMapActivity extends Activity {
         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, arrayList);
         list.setAdapter(adapter);
 
+    }
+
+
+    static void mostrarEnLista(String texto){
+        arrayList.add(texto);
+        adapter.notifyDataSetChanged();
     }
 }

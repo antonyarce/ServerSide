@@ -20,9 +20,29 @@ public class NodeMapActivity extends Activity {
         setContentView(R.layout.nodos);
         listN=(ListView)findViewById(R.id.listaN);
         arrayList = new ArrayList<String>();
-        adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, arrayList);
+        adapter = new ArrayAdapter<String>(getApplicationContext(),R.layout.custom);
         listN.setAdapter(adapter);
-        //arrayList.add()
-        //adapter.notifyDataSetChanged();
+        recorrer();
+
+    }
+
+    public void mostrarEnLista(String texto){
+        arrayList.add(texto);
+        adapter.notifyDataSetChanged();
+    }
+
+    public void recorrer(){
+        MeshNode auxiliar = MapManager.listaMeshNodos.inicio;
+        for(;auxiliar!=null;auxiliar=auxiliar.siguiente){
+            mostrarEnLista(auxiliar.toString());
+        }
+    }
+
+    public void limpiar(){
+        int count = adapter.getCount();
+        for(int i = 0;1<count;i++){
+            adapter.remove(adapter.getItem(count));
+        }
+        adapter.notifyDataSetChanged();
     }
 }

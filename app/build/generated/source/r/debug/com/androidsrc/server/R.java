@@ -827,7 +827,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f0b0001;
         public static final int action_menu_presenter=0x7f0b0002;
         public static final int action_mode_close_button=0x7f0b0024;
-        public static final int action_settings=0x7f0b0045;
+        public static final int action_settings=0x7f0b0046;
         public static final int activity_chooser_view_content=0x7f0b0025;
         public static final int activity_grafic_nodes=0x7f0b003c;
         public static final int always=0x7f0b0013;
@@ -851,8 +851,8 @@ containing a value of this type.
         public static final int listMode=0x7f0b0006;
         public static final int listView=0x7f0b0040;
         public static final int list_item=0x7f0b0029;
-        public static final int lista=0x7f0b0043;
-        public static final int listaN=0x7f0b0044;
+        public static final int lista=0x7f0b0044;
+        public static final int listaN=0x7f0b0045;
         public static final int memoria=0x7f0b0042;
         public static final int middle=0x7f0b0011;
         public static final int msg=0x7f0b003f;
@@ -883,6 +883,7 @@ containing a value of this type.
         public static final int tabMode=0x7f0b0008;
         public static final int title=0x7f0b002b;
         public static final int top_action_bar=0x7f0b0020;
+        public static final int tv=0x7f0b0043;
         public static final int up=0x7f0b0021;
         public static final int useLogo=0x7f0b000e;
         public static final int withText=0x7f0b0017;
@@ -918,9 +919,10 @@ containing a value of this type.
         public static final int activity_grafic_nodes=0x7f030018;
         public static final int activity_main=0x7f030019;
         public static final int botones=0x7f03001a;
-        public static final int memoria=0x7f03001b;
-        public static final int nodos=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int custom=0x7f03001b;
+        public static final int memoria=0x7f03001c;
+        public static final int nodos=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

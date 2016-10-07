@@ -9,10 +9,14 @@ public class MeshNode {
     public int num, port, bytesTot, bytesUso, bytedisponibles;
     public boolean _Free;
     MeshNode siguiente,anterior;
+    NodeMapActivity activity;
 
     //Constructor para cuando aun no hay nodos
     public MeshNode(String IP,int PORT,int NUM, int BYTESTOTALES,String ID){
         this(IP,PORT,NUM,BYTESTOTALES,ID,null,null);
+        String cadena = "IP: "+IP+", Puerto: "+port+", MemTot: "+bytesTot
+                +", MemDisp: "+bytedisponibles;
+
     }
 
     //Constructor para cuando ya hay nodos
@@ -26,6 +30,13 @@ public class MeshNode {
         siguiente=sig;
         anterior=ant;
         _Free=false;
+
+
+    }
+
+    public String toString(){
+        return "IP: "+ip+", Puerto: "+port+", MemTot: "+bytesTot
+                +", MemDisp: "+bytedisponibles;
     }
 
     public String getId() {

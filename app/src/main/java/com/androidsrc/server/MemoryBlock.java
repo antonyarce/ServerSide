@@ -12,7 +12,10 @@ public class MemoryBlock {
 
     //Constructor para cuando aun no hay nodos
     public MemoryBlock(String ID,String IDMESH,int SIZE){
+
         this(ID,IDMESH,SIZE,null,null);
+        /*String cadena = "IdMeshNode: "+idMeshNode+", UUIDspace: "+UUIDspace;
+        MemoryMapActivity.mostrarEnLista(cadena);*/
     }
 
     //Constructor para cuando ya hay nodos
@@ -22,6 +25,9 @@ public class MemoryBlock {
         size=SIZE;
         siguiente=sig;
         anterior=ant;
+
+       /* String cadena = "IdMeshNode: "+idMeshNode+", UUIDspace: "+UUIDspace;
+        MemoryMapActivity.mostrarEnLista(cadena);*/
     }
 
     public String getUUIDspace() {

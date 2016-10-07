@@ -4,12 +4,8 @@ package com.androidsrc.server;
  * Created by allan on 19/09/16.
  */
 
-import android.renderscript.ScriptIntrinsicYuvToRGB;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Map;
 
 
 public class JsonManager{
@@ -87,7 +83,7 @@ public class JsonManager{
         }if (accion.equalsIgnoreCase("xFree")){
             //Parsea los datos
             String tokenrecibido = parser.getString("Token");
-            String idLiberar = parser.getString("ID");
+            String idLiberar = parser.getString("UUID");
 
             //Settea el MemoryBlock como libre usando el idLiberar
             MapManager.listaDeBloques.setFree(idLiberar);
