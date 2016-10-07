@@ -44,7 +44,6 @@ public class GraficNodes extends BotonesActivity {
         }
 
 
-
         PieDataSet dataset = new PieDataSet(entries,"Numero de los nodos");
         dataset.setSliceSpace(3);
         dataset.setSelectionShift(5);
