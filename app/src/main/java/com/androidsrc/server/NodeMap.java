@@ -94,11 +94,11 @@ public class NodeMap {
 
     public String buscarip(String id) {
         MeshNode auxiliar = inicio;
-        for (; auxiliar != null && !id.equals(auxiliar.getId()); auxiliar = auxiliar.siguiente) ;
+        for (; auxiliar != null && !id.equalsIgnoreCase(auxiliar.id); auxiliar = auxiliar.siguiente) ;
         if (auxiliar == null) {
             return null;
         } else {
-            return auxiliar.getIp();
+            return auxiliar.ip;
         }
 
     }
