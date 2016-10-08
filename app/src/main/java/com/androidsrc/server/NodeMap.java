@@ -114,6 +114,18 @@ public class NodeMap {
 
     }
 
+    public String buscarespacio(int size){
+        MeshNode auxiliar = inicio;
+        for (; auxiliar != null && !(size>auxiliar.getBytedisponibles()); auxiliar = auxiliar.siguiente);
+        if (auxiliar == null){
+            return null;
+        }else{
+            auxiliar.bytesUso=auxiliar.bytesUso+size;
+            auxiliar.setBytedisponibles(auxiliar.bytedisponibles-size);
+            return auxiliar.getId();
+        }
+    }
+
 
     public void borrarInicio() {
         if (inicio == fin) {

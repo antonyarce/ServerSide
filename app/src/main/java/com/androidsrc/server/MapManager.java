@@ -18,7 +18,7 @@ public class MapManager {
         return String.valueOf(contador);
     }
 
-    static String buscarEspacio(int size) {
+    /*static String buscarEspacio(int size) {
         MeshNode auxiliar = listaMeshNodos.inicio;
         for (; auxiliar != null && !(size>auxiliar.getBytedisponibles()); auxiliar = auxiliar.siguiente) ;
         if (auxiliar == null) {
@@ -29,6 +29,12 @@ public class MapManager {
             return auxiliar.getId();
         }
 
+    }*/
+
+    static String buscarEspacio(int size){
+        int i=0;
+        String idMeshNode = MapManager.listaMeshNodos.buscarespacio(size);
+        return idMeshNode;
     }
 
     static void Garbage(){
