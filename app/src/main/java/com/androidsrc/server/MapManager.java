@@ -1,5 +1,7 @@
 package com.androidsrc.server;
 
+import android.media.MediaActionSound;
+
 /**
  * Created by allan on 27/09/16.
  */
@@ -34,26 +36,24 @@ public class MapManager {
             @SuppressWarnings("unchecked")
             @Override
             public void run() {
-                    MemoryBlock temp = MapManager.listaDeBloques.inicio;
                     for(int i = 0;i < MapManager.listaDeBloques.tamaño();i++){
-                        if(temp.is_Free()) {
+                        if(MapManager.listaDeBloques.buscarFree(i)) {
 
-                            String idMeshNode = temp.getIdMeshNode();
-                            String ip = MapManager.listaMeshNodos.buscar(idMeshNode).getIp();
-                            int port = MapManager.listaMeshNodos.buscar(idMeshNode).getPort();
-                            String idGarbage = temp.getUUIDspace();
+                            String idMeshNode = MapManager.listaDeBloques.buscarIdMesh(i);
+                            String ip = MapManager.listaMeshNodos.buscarip(idMeshNode);
+                            int port = MapManager.listaMeshNodos.buscarport(idMeshNode);
+                            String idGarbage = MapManager.listaDeBloques.buscarUUID(i);
 
-                            int nuevosBytesDisp = MapManager.listaMeshNodos.buscar(idMeshNode).bytedisponibles + temp.getSize();
+                            int nuevosBytesDisp = MapManager.listaMeshNodos.buscar(idMeshNode).bytedisponibles + MapManager.listaDeBloques.buscarSize(i);
                             MapManager.listaMeshNodos.buscar(idMeshNode).setBytedisponibles(nuevosBytesDisp);
 
-                            int nuevosBytesUso = MapManager.listaMeshNodos.buscar(idMeshNode).bytesUso - temp.getSize();
+                            int nuevosBytesUso = MapManager.listaMeshNodos.buscar(idMeshNode).bytesUso - MapManager.listaDeBloques.buscarSize(i);
                             MapManager.listaMeshNodos.buscar(idMeshNode).setBytesUso(nuevosBytesUso);
 
                             String accionMensaje = "Garbage";
                             Client client = new Client(ip,port,"{\"Accion\":\""+accionMensaje+"\",\"UUIDEspacio\":\""+idGarbage+"\",\"BytesDisp\":\""+Integer.toString(nuevosBytesDisp)+"\"}");
 
                         }
-                        temp = temp.siguiente;
                     }
             }
         }).start();

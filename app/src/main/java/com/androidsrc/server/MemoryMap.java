@@ -43,6 +43,54 @@ public class MemoryMap {
         }
     }
 
+    public boolean buscarFree(int posicion){
+        if(tamaño() != 0) {
+            MemoryBlock auxiliar = inicio;
+            for(int i = 0; posicion <= tamaño(); i++){
+                auxiliar = auxiliar.siguiente;
+            }
+            return auxiliar.is_Free();
+        }
+        System.out.print("Lista vacia");
+        return false;
+    }
+
+    public String buscarIdMesh(int posicion){
+        if(tamaño() != 0) {
+            MemoryBlock auxiliar = inicio;
+            for(int i = 0; posicion <= tamaño(); i++){
+                auxiliar = auxiliar.siguiente;
+            }
+            return auxiliar.getIdMeshNode();
+        }
+        System.out.print("Lista vacia");
+        return null;
+    }
+
+    public String buscarUUID(int posicion){
+        if(tamaño() != 0) {
+            MemoryBlock auxiliar = inicio;
+            for(int i = 0; posicion <= tamaño(); i++){
+                auxiliar = auxiliar.siguiente;
+            }
+            return auxiliar.getUUIDspace();
+        }
+        System.out.print("Lista vacia");
+        return null;
+    }
+
+    public int buscarSize(int posicion){
+        if(tamaño() != 0) {
+            MemoryBlock auxiliar = inicio;
+            for(int i = 0; posicion <= tamaño(); i++){
+                auxiliar = auxiliar.siguiente;
+            }
+            return auxiliar.getSize();
+        }
+        System.out.print("Lista vacia");
+        return 0 ;
+    }
+
 
     public String mostrarInicioFin(){
         String datos="<=>";

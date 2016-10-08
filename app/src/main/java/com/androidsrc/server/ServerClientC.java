@@ -74,6 +74,8 @@ public class ServerClientC {
                             + socket.getPort() +" "+texto+"\n";*/
 
 
+                    //MapManager.Garbage();
+
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
